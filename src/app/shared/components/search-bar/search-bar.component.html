@@ -1,1 +1,11 @@
-<p>search-bar works!</p>
+<input type="text" [(ngModel)]="query">
+<select [(ngModel)]="category">
+    <option value="science">Ciencia</option>
+    <option value="education">Educacion</option>
+    <option value="people">Personas</option>
+    <option value="feelings">Sentimientos</option>
+    <option value="computer">Computacion</option>
+    <option value="buildings">Construciones</option>
+</select>
+<button (click)="search()">Search</button>
+
