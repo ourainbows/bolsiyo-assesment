@@ -1,5 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -19,7 +20,7 @@ export class ImagesService {
     return this.http.get<any>(this.apiUrl, { params });
   }
 
-  public getImage(id: string) {
+  public getImage(id: string) : Observable<any> {
     const image$ = this.http.get<any>(`${this.apiUrl}&id=${id}`);
     return image$;
   }
