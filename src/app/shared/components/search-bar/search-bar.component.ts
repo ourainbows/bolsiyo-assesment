@@ -13,8 +13,9 @@ export class SearchBarComponent implements OnInit {
   public category: string = '';
 
   public search(): void {
-    this.router.navigate(['/images']),
-      { queryParams: { query: this.query, category: this.category } };
+    this.router.navigate(['/images'], {
+      queryParams: { query: this.query, category: this.category },
+    });
   }
 
   ngOnInit(): void {}
