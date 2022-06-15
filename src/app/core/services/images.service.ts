@@ -2,20 +2,25 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ImagesService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  private apiUrl = "https://pixabay.com/api/?key=13119377-fc7e10c6305a7de49da6ecb25"
+  private apiUrl =
+     'https://pixabay.com/api/?key=13119377-fc7e10c6305a7de49da6ecb25';
 
   public getImages(q: string, category?: string) {
-    let params = new HttpParams()
-    params = params.set('q', q)
+    let params = new HttpParams();
+    params = params.set('q', q);
     if (category) {
-      params = params.set('category', category)
+      params = params.set('category', category);
     }
-    return this.http.get<any>(this.apiUrl, { params })
+    return this.http.get<any>(this.apiUrl, { params });
   }
 
+  public getImage(id: string) {
+    const image$ = this.http.get<any>(`${this.apiUrl}&id=${id}`);
+    return image$;
+  }
 }
