@@ -1,5 +1,7 @@
 <app-search-bar></app-search-bar>
 
 <div *ngFor="let image of images">
-    <img [src]="image.webformatURL" alt="" [height]="image.webformatHeight" [width]="image.webformatWidth">
+    <a [routerLink]="'/image-detail/' + image.id">
+        <img [src]="image.webformatURL" alt="" [height]="image.webformatHeight" [width]="image.webformatWidth">
+    </a>
 </div>
