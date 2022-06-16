@@ -1,6 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { imageResponseModel } from '../models/image.model';
 
 @Injectable({
   providedIn: 'root',
@@ -17,11 +18,11 @@ export class ImagesService {
     if (category) {
       params = params.set('category', category);
     }
-    return this.http.get<any>(this.apiUrl, { params });
+    return this.http.get<imageResponseModel>(this.apiUrl, { params });
   }
 
   public getImage(id: string) : Observable<any> {
-    const image$ = this.http.get<any>(`${this.apiUrl}&id=${id}`);
+    const image$ = this.http.get<imageResponseModel>(`${this.apiUrl}&id=${id}`);
     return image$;
   }
 }

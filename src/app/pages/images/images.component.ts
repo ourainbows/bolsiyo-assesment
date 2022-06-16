@@ -1,3 +1,4 @@
+import { imageModel } from './../../core/models/image.model';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ImagesService } from 'src/app/core/services/images.service';
@@ -10,7 +11,7 @@ import { ImagesService } from 'src/app/core/services/images.service';
 export class ImagesComponent implements OnInit {
   constructor(private router: ActivatedRoute, private imagesService: ImagesService) { }
   
-  public images: any[] = [];
+  public images: imageModel[] = [];
 
   ngOnInit(): void {
     this.router.queryParams.subscribe(params => {

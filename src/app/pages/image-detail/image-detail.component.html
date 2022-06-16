@@ -1,1 +1,3 @@
-<p>image-detail works!</p>
+<app-search-bar></app-search-bar>
+<p>{{ (image$ | async)?.type }}</p>
+<img [src]="(image$ | async)?.webformatURL" alt="">

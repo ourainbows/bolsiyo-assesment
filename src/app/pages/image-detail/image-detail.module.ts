@@ -1,3 +1,4 @@
+import { SharedModule } from 'src/app/shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -11,7 +12,8 @@ import { ImageDetailComponent } from './image-detail.component';
   ],
   imports: [
     CommonModule,
-    ImageDetailRoutingModule
+    ImageDetailRoutingModule,
+    SharedModule
   ]
 })
 export class ImageDetailModule { }
