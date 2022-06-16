@@ -1,3 +1,4 @@
+import { ImageEffects } from './core/state/effects/image.effects';
 import { imageReducer } from './core/state/reducers/image.reducer';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,7 +20,7 @@ import { environment } from '../environments/environment';
     HttpClientModule,
     FormsModule,
     StoreModule.forRoot({stateImage: imageReducer}),
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([ImageEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],
   providers: [],
