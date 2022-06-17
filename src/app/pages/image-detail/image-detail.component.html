@@ -1,4 +1,4 @@
-<div class="flex justify-between mx-1 mt-32 mb-4">
+<div class="flex justify-between mx-1 mt-32 mb-4 md:px-2 md:mb-8">
   <div class="flex">
     <img
       [src]="(image$ | async)?.userImageURL"
@@ -14,9 +14,8 @@
     <p class="mx-2">Download</p>
   </div>
 </div>
-<img [src]="(image$ | async)?.webformatURL" alt="" />
-
-<div class="flex flex-col mx-1 mt-5 mb-20">
+<img [src]="(image$ | async)?.webformatURL" alt="" class="my-0 mx-auto" />
+<div class="flex flex-col mx-1 mt-5 mb-20 md:mt-16 md:px-2">
   <div class="flex gap-1">
     <div
       class="bg-gray-700 text-white rounded-lg w-6 h-6 flex justify-center items-center"
