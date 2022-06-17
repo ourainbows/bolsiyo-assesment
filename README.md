@@ -21,4 +21,4 @@ ng serve -o
 
 ## Usage
 
-You can use the application in [the deploy](netlify.app/bolsiyo), here you cand search any image and also you can filter the image by the categories metioned above.
+You can use the application in [the deploy]([netlify.app/bolsiyo](https://bolsiyo-assesment.netlify.app/)), here you cand search any image and also you can filter the image by the categories metioned above.
