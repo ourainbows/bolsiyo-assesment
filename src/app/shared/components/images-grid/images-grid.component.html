@@ -1,5 +1,6 @@
-<div  class="w-screen flex justify-center">
+<div class="w-screen flex justify-center">
   <div
+    *ngIf="images.length"
     class="container mx-auto space-y-2 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3 mb-20 max-w-7xl"
   >
     <div *ngFor="let image of images" class="w-full rounded">
@@ -10,7 +11,7 @@
   </div>
   <div
     *ngIf="!images.length"
-    class="flex items-center justify-center h-screen mx-1"
+    class="flex items-center justify-center h-screen mx-1 max-w-7xl"
   >
     <p class="text-center">
       Lo sentimos, no pudimos encontrar ninguna imagen con esos criterios :(
