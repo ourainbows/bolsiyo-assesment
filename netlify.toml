@@ -5,4 +5,4 @@
            
  from="/*"
   to="/index.html"
-  status=200I
+  status=200
