@@ -1,4 +1,4 @@
-<input type="text" [(ngModel)]="query">
+<input type="text" [(ngModel)]="query" (keyup.enter)="search()" maxlength="100">
 <select [(ngModel)]="category">
     <option value="science">Ciencia</option>
     <option value="education">Educacion</option>
