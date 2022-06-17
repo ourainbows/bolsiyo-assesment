@@ -1,3 +1,4 @@
+import { SharedModule } from 'src/app/shared/shared.module';
 import { ImageEffects } from './core/state/effects/image.effects';
 import { imageReducer } from './core/state/reducers/image.reducer';
 import { NgModule } from '@angular/core';
@@ -22,6 +23,7 @@ import { environment } from '../environments/environment';
     StoreModule.forRoot({stateImage: imageReducer}),
     EffectsModule.forRoot([ImageEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent],
