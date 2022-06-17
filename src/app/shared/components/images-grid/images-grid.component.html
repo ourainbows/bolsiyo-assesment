@@ -1,17 +1,19 @@
-<div
-  class="container mx-auto space-y-2 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3 mb-20"
->
-  <div *ngFor="let image of images" class="w-full rounded">
-    <a [routerLink]="'/image-detail/' + image.id">
-      <img [src]="image.webformatURL" alt="Image" class="w-screen" />
-    </a>
+<div  class="w-screen flex justify-center">
+  <div
+    class="container mx-auto space-y-2 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3 mb-20 max-w-7xl"
+  >
+    <div *ngFor="let image of images" class="w-full rounded">
+      <a [routerLink]="'/image-detail/' + image.id">
+        <img [src]="image.webformatURL" alt="Image" class="w-screen" />
+      </a>
+    </div>
   </div>
-</div>
-<div
-  *ngIf="!images.length"
-  class="flex items-center justify-center h-screen mx-1"
->
-  <p class="text-center">
-    Lo sentimos, no pudimos encontrar ninguna imagen con esos criterios :(
-  </p>
+  <div
+    *ngIf="!images.length"
+    class="flex items-center justify-center h-screen mx-1"
+  >
+    <p class="text-center">
+      Lo sentimos, no pudimos encontrar ninguna imagen con esos criterios :(
+    </p>
+  </div>
 </div>
