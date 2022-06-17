@@ -1,7 +1,8 @@
+<div class="flex justify-center items-center">
   <div class="flex">
     <select
       [(ngModel)]="category"
-      class="flex-shrink-0 z-10 inline-flex items-center text-sm font-medium text-center text-gray-900 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100"
+      class="flex-shrink-0 z-10 inline-flex items-center text-sm font-medium text-center text-gray-900 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 w-14"
     >
       <option value="" selected hidden>All</option>
       <option value="science">Ciencia</option>
@@ -30,7 +31,7 @@
         [(ngModel)]="query"
         (keyup.enter)="search()"
         maxlength="100"
-        class="block p-2.5 w-96 z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-sky-500 focus:border-sky-500 focus:outline-none" 
+        class="block p-2.5  z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-sky-500 focus:border-sky-500 focus:outline-none"
         placeholder="Search..."
         required
       />
@@ -55,4 +56,4 @@
       </button>
     </div>
   </div>
-
+</div>
